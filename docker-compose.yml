@@ -1,0 +1,18 @@
+name: listen2this
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SPOTIPY_CLIENT_ID=${SPOTIPY_CLIENT_ID}
+      - SPOTIPY_CLIENT_SECRET=${SPOTIPY_CLIENT_SECRET}
+      - SPOTIPY_REDIRECT_URI=${SPOTIPY_REDIRECT_URI}
+      - SPOTIPY_REFRESH_TOKEN=${SPOTIPY_REFRESH_TOKEN}
+      - SPOTIPY_BEARER_TOKEN=${SPOTIPY_BEARER_TOKEN}
+    ports:
+      - "8888:8888"
+    volumes:
+      - listen2this_data:/data
+volumes:
+  listen2this_data:

@@ -1,0 +1,4 @@
+requests>=2.32.0
+spotipy>=2.17.0
+pillow>=11.1.0
+python-dotenv>=1.0.0
