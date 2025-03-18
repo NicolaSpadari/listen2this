@@ -150,7 +150,6 @@ def get_and_modify_cover_image():
     img_byte_arr.seek(0)
     
     print(f"Final image size: {len(img_byte_arr.getvalue()) / 1024:.2f} KB")
-    image.show()
     
     return img_byte_arr
 
